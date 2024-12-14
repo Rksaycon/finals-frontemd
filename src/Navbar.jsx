@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./navbar.css"; // Import custom styles
+import "./Navbar.css"; // Import custom styles
 
 function Navbar({ isLoggedIn, onLogout }) {
   const token = localStorage.getItem("token");
