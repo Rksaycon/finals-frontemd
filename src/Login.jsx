@@ -36,7 +36,7 @@ function Login() {
 
   return (
     <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh', width: '100vw', backgroundColor: '#f8f9fa' }}>
-      <div className="card p-4" style={{ width: '400px' }}>
+      <div className="card p-4" style={{ width: '100%', maxWidth: '400px' }}>
         <h3 className="text-center">Login</h3>
         <form onSubmit={handleSubmit}>
           {error && <p className="text-danger">{error}</p>}
