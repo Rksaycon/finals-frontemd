@@ -27,7 +27,7 @@ function CreateAccount() {
       if (!response.ok) throw new Error('Failed to create account');
 
       const result = await response.json();
-      setSuccess('Account created successfully! Redirecting to login...');
+      setSuccess('Account created successfully! Redirecting to homepage.....');
       
       // Redirect after 2 seconds to avoid confusing the user
       setTimeout(() => navigate('/'), 2000); 

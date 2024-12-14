@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import "./Navbar.css"; // Import custom styles
+import "./Navbar.css"; // Custom styles
 
 function Navbar({ isLoggedIn, onLogout }) {
   const token = localStorage.getItem("token");
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+    <nav className="navbar navbar-expand-lg navbar-light custom-navbar">
       <div className="container-fluid">
         <Link className="navbar-brand custom-brand" to="/">CodeSphere University</Link>
         <button
@@ -23,27 +23,27 @@ function Navbar({ isLoggedIn, onLogout }) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto custom-nav-links">
             <li className="nav-item">
-              <Link className="nav-link custom-link" to="/">Home</Link>
+              <Link className="nav-link" to="/">Home</Link>
             </li>
             {token && (
               <li className="nav-item">
-                <Link className="nav-link custom-link" to="/dashboard">Dashboard</Link>
+                <Link className="nav-link" to="/dashboard">Dashboard</Link>
               </li>
             )}
             <li className="nav-item">
-              <Link className="nav-link custom-link" to="/admission">Admission</Link>
+              <Link className="nav-link" to="/admission">Admission</Link>
             </li>
             {!token ? (
               <li className="nav-item">
-                <Link className="nav-link custom-link" to="/login">Login</Link>
+                <Link className="nav-link" to="/login">Login</Link>
               </li>
             ) : (
               <li className="nav-item">
                 <button
-                  className="nav-link custom-link custom-logout-btn"
+                  className="nav-link custom-logout-btn"
                   onClick={() => {
                     localStorage.removeItem("token");
-                    window.location.reload();  // Remove token and reload the page
+                    window.location.reload();  // Remove token and reload
                   }}
                 >
                   Logout
