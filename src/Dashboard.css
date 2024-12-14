@@ -1,0 +1,252 @@
+/* Dashboard Styles */
+.dashboard-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .dashboard-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dashboard-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .dashboard-header h4 {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .dashboard-header .actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Table Styles */
+  .table {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .table:hover {
+    transform: scale(1.02);
+  }
+  
+  .table th {
+    background: linear-gradient(135deg, #007bff, #6c757d);
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .table td {
+    text-align: center;
+    padding: 16px;
+    font-size: 1.1rem;
+    color: #495057;
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .table tr:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button Styles */
+  .btn-primary, .btn-info, .btn-warning, .btn-danger {
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-info {
+    background-color: #17a2b8;
+    border: none;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    border: none;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-info:hover {
+    background-color: #138496;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Create User Button */
+  .add-user-btn {
+    background-color: #28a745;
+    color: white;
+    border-radius: 25px;
+    padding: 12px 30px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .add-user-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Create/Edit User Form */
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 30px;
+    padding: 25px;
+    animation: modalFadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card .form-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    border-radius: 8px;
+    padding: 14px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  .form-control::placeholder {
+    color: #adb5bd;
+  }
+  
+  /* Modal Animation */
+  @keyframes modalFadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .modal-footer .btn:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+  }
+  
+  /* Hover Animations for Table Rows */
+  .table tr {
+    transition: all 0.3s ease;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 20px;
+    }
+  
+    .table th, .table td {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    .btn-primary, .btn-info, .btn-warning, .btn-danger, .add-user-btn {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  
+    .dashboard-title {
+      font-size: 2rem;
+    }
+  }
+  
