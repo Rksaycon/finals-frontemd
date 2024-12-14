@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import './App.css'
+
 import Login from "./Login";
 import CreateAccount from "./CreateAccount";
 import Home from "./Home";
@@ -63,7 +63,7 @@ function DashboardWithRedirect() {
     }
   }, [navigate]);
 
-  return <Dashboard />;
+  return <Dashboard />; // Show the dashboard if authenticated
 }
 
 export default App;
