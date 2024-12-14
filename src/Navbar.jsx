@@ -9,8 +9,19 @@ function Navbar({ isLoggedIn, onLogout }) {
     <nav className="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
       <div className="container-fluid">
         <Link className="navbar-brand custom-brand" to="/">CodeSphere University</Link>
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav ml-auto custom-nav-links">
+        <button 
+          className="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto custom-nav-links">
             <li className="nav-item">
               <Link className="nav-link custom-link" to="/">Home</Link>
             </li>
